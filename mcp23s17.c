@@ -21,8 +21,8 @@ int main (void) {
   pullUpDnControl (BASE + 15, PUD_UP) ;
 
   while (1) {
-    for (i = 0 ; i < 1024 ; ++i) {
-      for (bit = 0 ; bit < 10 ; ++bit)
+    for (i = 0; i < 1024; i++) {
+      for (bit = 0 ; bit < 10 ; bit++)
         digitalWrite (BASE + bit, i & (1 << bit)) ;
       delay (5) ;
       while (digitalRead (BASE + 15) == 0)
